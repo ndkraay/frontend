@@ -23,12 +23,12 @@
 
 @font-face {
     font-family: "chenko";
-    src: url("/fonts/rodchenko-cond.6802b8ce.ttf");
+    src: url("fonts/rodchenko-cond.6802b8ce.ttf");
 }
 
 @font-face {
     font-family: "gtamerica";
-    src: url("/fonts/GT-America-Mono-Regular.31deb2db.ttf");
+    src: url("fonts/GT-America-Mono-Regular.31deb2db.ttf");
 }
 
 /****************/
@@ -42,7 +42,7 @@ body {
 
     background-color: var(--color-background);
     color: var(--color-text);
-    background-image: url("/images/bg.jpg");
+    background-image: url("images/bg.jpg");
 }
 
 p {
