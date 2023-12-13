@@ -236,8 +236,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+Button doorzichtig maken: 
+    https://stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button
+
+LOGO SVG: 
+    Rammstein website devtools
+
+KRUIS SVG (in nav):
+    Rammstein website devtools
+
+2e section hover vlakken in index:
+    Sanne tijdens bespreking
+
+h3 SVG's: 
+    ChatGPT
 
 </details>
