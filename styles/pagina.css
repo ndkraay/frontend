@@ -34,7 +34,7 @@ main section ul {
 
 /* li met datum en land */
 main section li {
-    border-top: 0.01em solid rgb(74, 74, 74);
+    border-top: 0.01em solid var(--color-tertair);
     padding-top: 0.3em;
     padding-bottom: 0.4em;
     padding-left: 1em;
