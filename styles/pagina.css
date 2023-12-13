@@ -1,0 +1,184 @@
+main section:nth-of-type(1) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 7em;
+}
+
+main section svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 1.5em;
+}
+
+main section h2 {
+    margin-left: 3.9em;
+    margin-top: -2.8em;
+}
+
+/*h2 LIVE */
+main section h3 {
+    margin-left: 1em;
+}
+
+/* de a's om de li's in de ul */
+main section ul a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+main section ul {
+    margin-right: 1em;
+    margin-left: -1em;
+}
+
+/* li met datum en land */
+main section li {
+    border-top: 0.01em solid rgb(74, 74, 74);
+    padding-top: 0.3em;
+    padding-bottom: 0.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: min-content min-content;
+    gap: 0.2em;
+}
+
+main section li:hover {
+    background-color: var(--color-tertair);
+}
+
+/* datum in li */
+main section li p:first-child {
+    color: var(--color-text);
+    font-size: 0.8em;
+    margin: 0;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: "arial";
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: start;
+}
+
+/* Button1 in li */
+main section li button:nth-of-type(1) {
+    background-color: var(--color-primair);
+    color: var(--color-background);
+    font-family: "gtamerica";
+
+    border-radius: 1.3em;
+    padding: 1em;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+    align-self: flex-end;
+}
+
+/* button2 in li */
+main section li button:nth-of-type(2) {
+    background-color: transparent;
+    border: 0.01em solid var(--color-primair);
+    color: var(--color-primair);
+    font-family: "gtamerica";
+
+    font-family: "gtamerica";
+    font-size: 0.6em;
+
+    border-radius: 1.3em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    width: 4em;
+    height: 3em;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+/* Locatie (p) in li */
+main section li p:last-child {
+    grid-template-columns: min-content;
+    font-family: "gtamerica";
+    font-size: 1em;
+    margin: 0;
+}
+
+/* img van wereldbol */
+main section:nth-of-type(2) {
+    display: flex;
+    bottom: -14em;
+    position: sticky;
+
+}
+
+main section:nth-of-type(2) img {
+    width: 25em;
+    height: 27em;
+}
+
+
+@media (width > 768px) {
+    main {
+        display: flex;
+    }
+
+    main section:nth-of-type(1) {
+        display: grid;
+        width: 70%;
+        margin-left: 2em;
+        margin-right: 1em;
+    }
+
+    main section svg {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    main section h2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: relative;
+        left: 4em;
+        top: -0.5em;
+
+        margin: 0;
+    }
+
+    main section h3 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    main section ul {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    main section > a {
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        position: relative;
+        left: 1.5em;
+
+        color: var(--color-text);
+    }
+
+    main section:nth-of-type(2){
+         position: fixed;
+         top: 10em;
+         right: -13em;
+    }
+
+    main section:nth-of-type(2) img {
+        width: 30em;
+        height: 34em;
+    }
+}

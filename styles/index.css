@@ -1,0 +1,318 @@
+/* main section a:first-of-type{
+    cursor: url();
+} */
+
+:root {
+  /* startje */
+  --color-text: #fff;
+  --color-background: #000000;
+  --color-primair: #fff;
+  --color-secundair: rgb(25, 25, 25);
+  --color-tertair: rgb(72, 72, 72);
+  --bezig: hotpink;
+}
+
+/* a om video heen */
+main > section:first-of-type {
+  height: 100vh; /* Gebruik 100vh voor de hoogte van het volledige scherm */
+  margin-bottom: 6em;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: -8em;
+}
+
+/* text over video */
+main section h2 {
+  margin-left: 1em;
+}
+
+/* 'MORE' over video */
+main > section:nth-of-type(1) a:nth-of-type(2) {
+  color: var(--color-text);
+  font-family: "chenko";
+  text-transform: uppercase;
+}
+
+/* streepje naast NEWS */
+main section:nth-of-type(2) svg {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 1.5em;
+}
+
+/* NEWS (onder video) */
+main section:nth-of-type(2) h2 {
+  margin-top: -3em;
+  margin-left: 4em;
+}
+
+/* beide vlakken */
+section:nth-of-type(2) ul {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  padding: 0;
+  list-style: none;
+}
+
+/* individuele li vlakken */
+section:nth-of-type(2) ul li {
+  display: grid;
+  grid-template-rows: min-content min-content 1fr;
+  gap: 0.5em;
+  margin-bottom: 2em;
+  max-width: 25em;
+}
+
+/* titel li */
+section:nth-of-type(2) ul li h3 {
+  margin: 0;
+}
+
+/* p onder h3 */
+section:nth-of-type(2) li > p {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  margin: 0;
+
+  transition-duration: 0.5s;
+  transition-delay: 0.3s;
+}
+
+/* MEHR ERFAHREN in li */
+section:nth-of-type(2) li > a {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  color: var(--color-text);
+
+  transition-duration: 0.5s;
+  transition-delay: 0.3s;
+}
+
+/* Verborgen img in de li */
+section:nth-of-type(2) li > img {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  width: 60%;
+  margin-top: 2em;
+  margin-left: 1em;
+
+  opacity: 0;
+
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+/* ////////////HOVERS///////////// */
+
+section:nth-of-type(2) li:hover p {
+  translate: 0 2em;
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+section:nth-of-type(2) li:hover a {
+  translate: 0 2em;
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+section:nth-of-type(2) li:hover img {
+  opacity: 1;
+
+  transition-duration: 0.5s;
+  transition-delay: 0.3s;
+}
+
+@media (width > 768px) {
+  main section:nth-of-type(2) ul{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  main section:nth-of-type(2) ul li:nth-of-type(2){
+    margin-left: 2em;
+  }
+
+}
+
+
+/* SVG naast LIVE */
+main section:nth-of-type(3) svg {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 1.5em;
+}
+
+/*h2 LIVE */
+/* main section:nth-of-type(3) h2 {
+  margin-top: -3em;
+  margin-left: 4em;
+} */
+
+/* h3 Nachste Live Shows */
+main section:nth-of-type(3) h3 {
+  margin-left: 1em;
+}
+
+/* de a's om de li's in de ul */
+main section:nth-of-type(3) ul a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+main section:nth-of-type(3) ul {
+  margin-right: 1em;
+  margin-left: -1em;
+}
+
+/* li met datum en land */
+main section:nth-of-type(3) li {
+  border-top: 0.01em solid rgb(74, 74, 74);
+  padding-top: 0.3em;
+  padding-bottom: 0.4em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-rows: min-content min-content;
+  gap: .2em;
+}
+
+main section:nth-of-type(3) li:hover {
+  background-color: var(--color-tertair);
+}
+
+/* datum in li */
+main section:nth-of-type(3) li p:first-child {
+  color: var(--color-text);
+  font-size: .8em;
+  margin: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "arial";
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: start;
+}
+
+/* Button1 in li */
+main section:nth-of-type(3) li button:nth-of-type(1) {
+  background-color: var(--color-primair);
+  color: var(--color-background);
+  font-family: "gtamerica";
+
+  border-radius: 1.3em;
+  padding: 1em;
+
+  grid-column-start: 3;
+  grid-column-end: 5;
+  align-self: flex-end;
+}
+
+/* button2 in li */
+main section:nth-of-type(3) li button:nth-of-type(2) {
+  background-color: transparent;
+  border: 0.01em solid var(--color-primair);
+  color: var(--color-primair);
+  font-family: "gtamerica";
+
+  font-family: "gtamerica";
+  font-size: 0.6em;
+
+  border-radius: 1.3em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  width: 4em;
+  height: 3em;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+/* Locatie (p) in li */
+main section:nth-of-type(3) li p:last-child {
+  grid-template-columns: min-content;
+  font-family: "gtamerica";
+  font-size: 1em;
+  margin: 0;
+}
+
+/* img van wereldbol */
+main section:nth-of-type(3) img {
+  width: 25em;
+  height: 27em;
+  bottom: -14em;
+  position: sticky;
+}
+
+
+@media (width > 768px){
+  main section:nth-of-type(3){
+    display: grid;
+  }
+ 
+  main section:nth-of-type(3) svg{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  main section:nth-of-type(3) h2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+    left: 4em;
+    top: -.5em;
+
+    margin: 0;
+  }
+
+  main section:nth-of-type(3) h3{
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  main section:nth-of-type(3) ul{
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  main section:nth-of-type(3) > a{
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    position: relative;
+    left: 1.5em;
+
+    color: var(--color-text);
+  }
+
+  main section:nth-of-type(3) img{
+    /* display: block; */
+    /* position: relative; */
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    justify-self: center;
+    align-self: center;
+
+  }
+  
+
+}
